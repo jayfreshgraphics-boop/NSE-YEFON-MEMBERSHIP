@@ -118,7 +118,7 @@ export default function RegistrationForm({ onSubmitted }) {
           <fieldset>
             <label>Upload your certificate
               <input required type="file" accept="image/*,.pdf" onChange={(e) => updateFile('certificate', e.target.files[0])} />
-              <span className="hint">A clear photo or scan of your degree certificate.</span>
+              <span className="hint">A clear photo or scan of your NSE Membership certificate.</span>
             </label>
           </fieldset>
         )}
@@ -130,7 +130,7 @@ export default function RegistrationForm({ onSubmitted }) {
             </p>
             <label>Upload screenshot proof
               <input required type="file" accept="image/*" onChange={(e) => updateFile('social', e.target.files[0])} />
-              <span className="hint">One screenshot showing you're following both is fine.</span>
+              <span className="hint">Merge both in a pdf and upload.</span>
             </label>
           </fieldset>
         )}
