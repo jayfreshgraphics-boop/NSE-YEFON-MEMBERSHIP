@@ -41,7 +41,15 @@ export default function AdminDashboard() {
   }
 
   async function setStatus(id, field, value) {
-    await supabase.from('members').update({ [field]: value }).eq('id', id)
+    const wasApproved = members.find((m) => m.id === id)?.overall_status === 'approved'
+    const { data } = await supabase.from('members').update({ [field]: value }).eq('id', id).select().single()
+    if (data && data.overall_status === 'approved' && !wasApproved) {
+      fetch('/.netlify/functions/congratulate', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: data.email, full_name: data.full_name, member_id: data.member_id }),
+      }).catch(() => {}) // don't block the UI if this fails
+    }
     load()
   }
 
