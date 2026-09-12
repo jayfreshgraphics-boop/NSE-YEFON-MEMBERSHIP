@@ -130,7 +130,7 @@ export default function RegistrationForm({ onSubmitted }) {
             </p>
             <label>Upload screenshot proof
               <input required type="file" accept="image/*" onChange={(e) => updateFile('social', e.target.files[0])} />
-              <span className="hint">Merge both in a pdf and upload.</span>
+              <span className="hint">One screenshot showing you're following both is fine.</span>
             </label>
           </fieldset>
         )}
