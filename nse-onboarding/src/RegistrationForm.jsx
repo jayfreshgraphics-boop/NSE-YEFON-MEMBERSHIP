@@ -116,7 +116,7 @@ export default function RegistrationForm({ onSubmitted }) {
 
         {step === 2 && (
           <fieldset>
-            <label>Upload your certificate
+            <label>Upload your NSE Membership certificate
               <input required type="file" accept="image/*,.pdf" onChange={(e) => updateFile('certificate', e.target.files[0])} />
               <span className="hint">A clear photo or scan of your NSE Membership certificate.</span>
             </label>
@@ -138,7 +138,7 @@ export default function RegistrationForm({ onSubmitted }) {
         {step === 4 && (
           <fieldset>
             <p className="fieldset-intro">
-              Pay ₦2,500 Graduate Member due to First Bank, account <strong>2009996717</strong>, Ikeja Branch. Use the caption <strong>"YEFON DUE"</strong>.
+              Pay ₦2,500 Graduate Member due to First Bank, account <strong>2009996717</strong>, Ikeja Branch. Use the caption <strong>"Yearly Graduate Member Branch Due"</strong>.
             </p>
             <label>Upload payment receipt
               <input required type="file" accept="image/*,.pdf" onChange={(e) => updateFile('receipt', e.target.files[0])} />
