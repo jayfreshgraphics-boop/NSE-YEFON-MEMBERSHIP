@@ -53,7 +53,7 @@ export default function App() {
           <>
             <div className="intro">
               <h1>Welcome, new graduate engineer.</h1>
-              <p>Complete these four steps to confirm your membership with NSE Ikeja Branch YEFON.</p>
+              <p>Complete these four steps to confirm your membership with NSE Ikeja Branch YEFoN.</p>
             </div>
             <RegistrationForm onSubmitted={handleSubmitted} />
           </>
